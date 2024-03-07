@@ -14,7 +14,7 @@
 
 - Go to https://claude.ai
 - Sign in with your Google account.
-- Upload one of the abstracts files.
+- Upload one of the abstracts files from the [abstracts](abstracts) folder.
 - Prompt example:
 
 ```
