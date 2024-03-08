@@ -86,10 +86,13 @@ def run():
         print(f'Parsing card {i + 1} of {len(cards)}...')
         all_sessions.append(parse_card(cards[i]))
 
+    ndjson.dump(all_sessions, open(f"abstracts/abstracts-all.txt", "w"))
+
     # chunk all_sessions in size of 100, and dump to a file suffix by number
     chunk_size = 100
     for i in range(0, len(all_sessions), chunk_size):
         ndjson.dump(all_sessions[i:i + chunk_size], open(f"abstracts/abstracts-{(i // chunk_size) + 1}.txt", "w"))
+
 
     driver.quit()
 
